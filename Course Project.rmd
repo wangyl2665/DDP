@@ -1,0 +1,40 @@
+---
+title: "DDP Course Project"
+author: "WYL"
+date: "October 19, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Shiny application overview
+
+This app is related to the course project at data-products in coursera!   
+
+This app is a linear regression of the outcome mpg for each variable in the mpg dataset.
+
+The result including two part:  
+1. summary linear regrssion model.  
+2. show scatter plot and add fit line on it
+
+## How to use this App
+
+1. open the following link: https://wangyl2665.shinyapps.io/shinyappddp/
+2. select one predictor from drop-down memu.
+3. you will see the summary about line regression model and scatter plot 
+
+## Plot Output in R
+
+```{r, echo = TRUE}
+fit <- lm(mpg ~ disp, data = mtcars)
+plot(mpg ~ disp, data = mtcars, pch = 19, col = 'red')
+abline(fit, col = 'blue', lwd = 4)
+```
+
+## Links
+
+Shiny App URL: https://wangyl2665.shinyapps.io/shinyappddp/
+Github Repository URL: https://github.com/wangyl2665/DDP
+
